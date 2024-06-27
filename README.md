@@ -1,10 +1,21 @@
+Bem vindo a Pokedex de batalha.
+
+Aqui, com o intuito de montar um time competitivo de batalha, para qualquer geração da franquia,
+apresento uma ferramenta de busca tanto de pokémons, quanto de movimentos e TMs.
+
+Documentação do Código
+Descrição
+Este script coleta dados de três diferentes endpoints da API do Pokémon (PokéAPI), armazena esses dados em um 
+banco de dados SQLite, realiza algumas manipulações básicas nos dados e envia notificações em caso de falhas.
+O script é dividido em três partes principais:
+
 Coleta de dados de Pokémons.
 Coleta de dados de TMs.
 Coleta de dados de Movimentos.
 
 Além disso, o script possui funções auxiliares para salvar dados no banco de dados e enviar notificações.
 
-Dependências
+Dependências:
 Este script depende das seguintes bibliotecas:
 pandas
 requests
@@ -12,7 +23,7 @@ sqlite3
 plyer
 datetime
 
-Estrutura do Código
+Estrutura do Código:
 Funções Auxiliares
 save_to_db(df, table_name, conn)
 Salva um DataFrame em uma tabela no banco de dados SQLite.
@@ -56,5 +67,5 @@ Consulta das Tabelas no Banco de Dados
 Consulta e exibe os nomes das tabelas presentes no banco de dados.
 
 Conclusão
-Este script fornece uma maneira automatizada de coletar, processar e armazenar dados da PokéAPI em um banco de dados SQLite,
-além de monitorar e notificar possíveis falhas durante a execução.
+Este script fornece uma maneira automatizada de coletar, processar e armazenar dados da PokéAPI em um
+banco de dados SQLite, além de monitorar e notificar possíveis falhas durante a execução.
