@@ -6,7 +6,7 @@ apresento uma ferramenta de busca tanto de pokémons, quanto de movimentos e TMs
 Documentação do Código
 Descrição
 Este script coleta dados de três diferentes endpoints da API do Pokémon (PokéAPI), armazena esses dados em um 
-banco de dados SQLite, realiza algumas manipulações básicas nos dados e envia notificações em caso de falhas.
+banco de dados, realiza algumas manipulações básicas nos dados e o converte para o formato CSV.
 O script é dividido em três partes principais:
 
 Coleta de dados de Pokémons.
@@ -20,21 +20,7 @@ Este script depende das seguintes bibliotecas:
 pandas
 requests
 sqlite3
-plyer
 datetime
-
-Estrutura do Código:
-Funções Auxiliares
-save_to_db(df, table_name, conn)
-Salva um DataFrame em uma tabela no banco de dados SQLite.
-
-
-Envia uma notificação em caso de falha na execução.
-Parâmetros:
-nivel: Nível do alerta (1 - baixo, 2 - médio, 3 - alto).
-base: Nome da base de dados envolvida na falha.
-etapa: Etapa em que ocorreu a falha.
-
 
 Coleta de Dados
 1. Coleta de Dados dos Pokémons
@@ -68,4 +54,4 @@ Consulta e exibe os nomes das tabelas presentes no banco de dados.
 
 Conclusão
 Este script fornece uma maneira automatizada de coletar, processar e armazenar dados da PokéAPI em um
-banco de dados SQLite, além de monitorar e notificar possíveis falhas durante a execução.
+banco de dados CSV, tornando possível seu consumo no SQL Server para uma análise aprofundada de dados.
